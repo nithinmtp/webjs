@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  - for(var i=0;i<1;i++)
+    a(href="#{result[i]['quizlink']}")
+      img(src="#{result[i]['quizqnimg']}")
+    
+    h1=result[i]['quizid']
+    h3 heloo
+    a(href="#{result[1]['quizlink']}")
+      img(src="#{result[1]['quizqnimg']}")
+    h3 heloo
+    a(href="#{result[0]['quizlink']}")
+      img(src="#{result[0]['quizqnimg']}")
+
+

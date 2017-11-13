@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css?family=Farsan');
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+
+#fullpage{
+  height:100%;
+  width: 70%;
+  margin:0 15% 0 15%; 
+}
+.quizzes ul li
+{
+ height: 120px;
+ width:260px;
+list-style:none;
+float:left;
+padding: 0% 1% 2% 1%;
+margin-bottom: 1.5%;
+
+
+}
+.quizzes img{
+  height: 100%;
+  width: 100%;
+
+}
+
+#quiztitle{
+  line-height: 2px;
+  
+}
+#next {
+  width:40px;
+  height:40px;
+  margin-left:45%;
+}
+
+#qnfont{
+  margin-top: -1px;
+  font-family: 'Lato';font-size: 10px; font-weight: bold;color: #2E2D2D; ;
+  
+}

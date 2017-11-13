@@ -1,0 +1,154 @@
+title PageLayout
+link(rel='stylesheet', type='text/css', href='stylesheets/index.css')
+script(type='text/javascript', src='javascripts/meawwscript.js')
+// Adding img src
+script(type='text/javascript').
+  var image1=new Image();
+  image1.src="images/imgs/four.jpg"
+  var image2=new Image();
+  image2.src="images/imgs/six.png"
+  var image3=new Image();
+  image3.src="images/imgs/five.jpg"
+  var image4=new Image();
+  image4.src=img(src="#{result[0]['quizqnimg']}")
+// end
+#container
+  header
+    #header-inner
+      a#logo(href='index.html')
+        img(src='images/imgs/mewlogo.jpg')
+      nav
+        a#menu-icon(href='#')
+        ul
+          li
+            a.current(href='index.html') Home
+          li
+            a(href='#quizzlink') Quizzes
+          li
+            a(href='#article') Articles
+          li
+            a(href='https://en.meaww.com/support') Contact
+          li
+            a(href='https://en.meaww.com/about-us') About Us
+  #banner
+    img#cover_pic(src='images/imgs/one.jpg', name='slide')
+    // fn to randomize cover pic
+    script(type='text/javascript').
+      var step=1
+      function slideit()
+      {
+      document.images.slide.src=eval("image"+step+".src")
+      if(step<3)
+      step++
+      else
+      step=1
+      setTimeout("slideit()",2500)
+      }
+      slideit()
+  #quizzlink.quizzes
+    a(href='#header-inner')
+      img#backbutton(src='images/artimg/back.png')
+      h2 Welcome to the World Of quizzes
+      ul
+        li
+          a(href="#{result[0]['quizlink']}")
+             img(src="#{result[0]['quizqnimg']}")
+
+        li
+          a(href="#{result[1]['quizlink']}")
+            img(src="#{result[1]['quizqnimg']}")
+          
+        li
+          a(href="#{result[2]['quizlink']}")
+            img(src="#{result[2]['quizqnimg']}")
+          
+        li
+          a(href="#{result[3]['quizlink']}")
+            img(src="#{result[3]['quizqnimg']}")
+          
+        li
+          a(href="#{result[4]['quizlink']}")
+            img(src="#{result[4]['quizqnimg']}")
+        
+        li
+          a(href="#{result[5]['quizlink']}")
+            img(src="#{result[5]['quizqnimg']}")
+        li
+          a(href="#{result[6]['quizlink']}")
+            img(src="#{result[6]['quizqnimg']}")
+        li
+          a(href="#{result[7]['quizlink']}")
+            img(src="#{result[7]['quizqnimg']}")
+        li
+          a(href="#{result[8]['quizlink']}")
+            img(src="#{result[8]['quizqnimg']}")
+        
+          
+
+
+  #article
+    a(href='#header-inner')
+      img#backbutton(src='images/artimg/back.png')
+      h2  Meaww Articles
+      .art-section
+        ul.art-grid1
+          a(href='http://en.meaww.com/read/family?ref_source=top_nav')
+            li
+              .art-box
+                img#grid1pic(src='images/artimg/familynew.jpg')
+                h1#art-innertext Family
+          a(href='http://en.meaww.com/read/love?ref_source=top_nav')
+            li
+              .art-box
+                img#grid1pic(src='images/artimg/love.jpg')
+                h1#art-innertext Love
+          a(href='http://en.meaww.com/read/self?ref_source=top_nav')
+            li
+              .art-box
+                img#grid1pic(src='images/artimg/self.jpg')
+                h1#art-innertext Self
+        ul.art-grid2
+          a(href='http://en.meaww.com/read/life?ref_source=top_nav')
+            li
+              .art-box
+                img#grid2pic(src='images/artimg/life.jpg')
+                h1#art-innertext2 Life
+          a(href='http://en.meaww.com/read/offbeat?ref_source=top_nav')
+            li
+              .art-box
+                img#grid2pic(src='images/artimg/offbeat.jpg')
+                h1#art-innertext2 Off-beat
+          a(href='http://en.meaww.com/read/entertainment?ref_source=top_nav')
+            li
+              .art-box
+                img#grid2pic(src='images/artimg/entertainment.jpg')
+                h1#art-innertext2 Entertainment
+          a(href='http://en.meaww.com/read/spirituality?ref_source=top_nav')
+            li
+              .art-box
+                img#grid2pic(src='images/artimg/spirit.jpg')
+                h1#art-innertext2 Spirituality
+  // end article section
+  footer
+    ul
+      li
+        a(href='#header-inner')
+          img(src='images/artimg/home-icon.png')
+          br
+          h4#foot-words Home
+      li
+        a(href='https://en.meaww.com/delete')
+          img(src='images/artimg/delete.png')
+          br
+          h4#foot-words Delete app
+      li
+        a(href='https://en.meaww.com/support')
+          img(src='images/artimg/contactus.png')
+          br
+          h4#foot-words Contact us 
+      li
+        a(href='https://en.meaww.com/privacy')
+          img(src='images/artimg/privacy.png')
+          br
+          h4#foot-words Privacy 
+    h5#foot-lastsent Disclaimer:All content is provided for fun and entertainment purposes only.
